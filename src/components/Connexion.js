@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/Connexion.css';
 import LogoCenter from './LogoCenter';
-import CompteClient from './CreerCompte';
+import CreerCompte from './CreerCompte';
 
 class Connexion extends Component{
     state = {
@@ -14,6 +14,7 @@ class Connexion extends Component{
         this.setState({
             affiche:true
         })
+        // e.preventDefault()
     }
 
     handleChange = (e) =>{
@@ -28,7 +29,7 @@ class Connexion extends Component{
     render(){
         return this.state.affiche === true? (
             <div>
-                <CompteClient />
+                <CreerCompte />
             </div>
         ):(
             <div className = "page">
@@ -40,10 +41,10 @@ class Connexion extends Component{
 
                 <form className = "info-Page1" onSubmit={this.handleSubmit}>
 
-                    <label for='login'> </label>
+                    <label htmlFor='login'> </label>
                     <input type = 'text' id = 'login' placeholder = "Entrez votre login" size="40" onChange={this.handleChange} />
                     <br/><br/>
-                    <label for='mdp'></label>
+                    <label htmlFor='mdp'></label>
                     <input type = 'password' id = 'mdp' placeholder = "Entrez votre mot de passe" size="40" onChange={this.handleChange} />
                     <br/><br/>
                     <button id="connect" size="15">Connexion</button>
@@ -54,4 +55,5 @@ class Connexion extends Component{
         )
     }
 }
+
 export default Connexion;

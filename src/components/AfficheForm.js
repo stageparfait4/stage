@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './Resto.css';
 
-class Affiche extends Component{
+class CompteResto extends Component{
     state={
         Nom_restaurant:null,
         Nom_Proprietaire: null,
@@ -31,44 +30,47 @@ class Affiche extends Component{
      }   
     render(){
         return(
-        <div id = "ens">
-            <h1>Entrez voz coordonnees</h1>
+        <div className = "form-wrapper">
+            <h1>Entrez vos coordonnees</h1>
             <form  onSubmit={this.submit}>
-                <div id= "gauche">
-                    <input type="text" placeholder="Nom du restaurant" id="Nom" onChange={this.change}/><br/> <br/>
-                    <input type="text" placeholder="Email" id="Email" maxlength="40" onChange={this.change}/><br/><br/>
-                    <input type="text" placeholder="localisation" id="localisation"onChange={this.change} /><br/><br/>
-                    <label htmlFor="quartier" className="forme">   Quartier :   </label> <br/>
-                    <select name="quartier" onChange={this.function} value={this.state.value} >
+                <div className= "left">
+                    <input className="inputCreer" type="text" placeholder="Nom du restaurant" id="Nom" onChange={this.change}/><br/> <br/>
+                    <input className="inputCreer" type="text" placeholder="Email" id="Email" maxlength="40" onChange={this.change}/><br/><br/>
+                    <input className="inputCreer" type="text" placeholder="localisation" id="localisation"onChange={this.change} /><br/>
+                    <label htmlFor="quartier" className="labelCreer">   Quartier :   </label> <br/>
+                    <select className="selectCreer" name="quartier" onChange={this.function} value={this.state.value} >
                         <option value="bonaberie"  onChange={this.add}> Bonaberie</option>
                         <option value="lokpon"  onChange={this.add}> Lokpon</option>
                         <option value="village"  onChange={this.add}> Village</option>
                         <option value="cicam" onChange={this.add} > Cicam</option>
                     </select><br/><br/>
-                    <label htmlFor="heure ouverture" className="forme">heure ouverture :  </label><br/>
-                    <input type="time" placeholder="heure ouverture" id="heure ouverture" className="heure" onChange={this.change}/><br/><br/>
+                    <label htmlFor="heure ouverture" className="labelCreer">heure ouverture :  </label><br/>
+                    <input type="time" id="heure ouverture" className="heure" onChange={this.change}/><br/><br/>
                     
                 </div>
 
-                <div id="droite">
-                    <input type="text" placeholder="Nom du Proprietaire" id="Proprietaire" onChange={this.change}/><br/><br/>
-                    <input type="password" placeholder="mot de passe" id="mot de passe" onChange={this.change}/><br/><br/>
-                    <input type="text" placeholder="numero du proprietaire" id="numero" onChange={this.change}/><br/><br/>
-                    <label htmlFor="ville" className="forme">Ville :  </label><br/>
-                    <select name="ville" value="Yello" >
+                <div className="right">
+                    <input className="inputCreer" type="text" placeholder="Nom du Proprietaire" id="Proprietaire" onChange={this.change}/><br/><br/>
+                    <input className="inputCreer" type="password" placeholder="mot de passe" id="mot de passe" onChange={this.change}/><br/><br/>
+                    <input className="inputCreer" type="text" placeholder="numero du proprietaire" id="numero" onChange={this.change}/><br/>
+                    <label htmlFor="ville" className="labelCreer">Ville :  </label><br/>
+                    <select className="selectCreer" name="ville" value="Yello" >
                         <option value="baf"> Bafoussam</option>
                         <option value="dla"> Douala</option>
                         <option value="yde"> Yaounde</option>
                         <option value="bmda"> Bamenda</option>
                     </select><br/><br/>
-                    <label htmlFor="heure fermeture" className="forme">heure fermeture :  </label><br/>
-                    <input type="time" placeholder="heure fermeture" id="heure fermeture" className="heure" onChange={this.change} /><br/><br/>
+                    <label htmlFor="heure fermeture" className="labelCreer">heure fermeture :  </label><br/>
+                    <input type="time" id="heure fermeture" className="heure" onChange={this.change} /><br/><br/>
                 </div>
-                <button>Creer</button>
             </form>
+            <div>
+                <button className="buttonCreer">Creer</button><br />
+                <a id="creer" href = "/" onClick={this.handleClick}>Se connecter</a>
+            </div>
         </div>
     )}
     
 }
 
-export default Affiche;
+export default CompteResto;
