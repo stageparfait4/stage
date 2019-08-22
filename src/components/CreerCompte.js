@@ -26,9 +26,9 @@ class CompteClient extends Component {
     }
     render(){
         return this.state.Nom === true? (
-            <div>
-                <LogoCenter/>
-                <form onSubmit={this.submit}>
+            <div className="red">
+                <LogoCenter />
+                <form onSubmit={this.submit} className="formInitial">
                     <label htmlFor="resto">Restaurant</label>
                     <input type="radio" name='choice'id="res" onClick={this.displayScreen}/>
 
@@ -38,9 +38,9 @@ class CompteClient extends Component {
                 <Affiche sow={this.displayScreen}/>
             </div>
         ):(
-            <div id="initial">
-            <LogoCenter/>
-                <form onSubmit={this.submit}>
+            <div className="initial">
+            <LogoCenter/><br /><br /><br /><br /><br />
+                <form onSubmit={this.submit} className ="formInitial">
                     <label htmlFor="restaurant">Restaurant</label>
                     <input type="radio" name='choice'id="res" onClick={this.displayScreen}/>
                     <label htmlFor="client">client</label>
