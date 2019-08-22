@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import '../css/Connexion.css';
 import LogoCenter from './LogoCenter';
+import CompteClient from './CreerCompte';
 
 class Connexion extends Component{
     state = {
         login: null,
-        mdp: null
+        mdp: null,
+        affiche: false
     }
+
+    handleClick = (e) =>{
+        this.setState({
+            affiche:true
+        })
+    }
+
     handleChange = (e) =>{
         this.setState({
             [e.target.id]: e.target.value
@@ -17,7 +26,11 @@ class Connexion extends Component{
         console.log(this.state);
     }
     render(){
-        return(
+        return this.state.affiche === true? (
+            <div>
+                <CompteClient />
+            </div>
+        ):(
             <div className = "page">
             <LogoCenter />
                 <p>
@@ -35,7 +48,7 @@ class Connexion extends Component{
                     <br/><br/>
                     <button id="connect" size="15">Connexion</button>
                     <br/>
-                    <a id="creer" href = "/creercompte">creer un compte</a>
+                    <a id="creer" href = "#" onClick={this.handleClick}>creer un compte</a>
                 </form>
             </div>
         )

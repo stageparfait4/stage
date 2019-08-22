@@ -1,0 +1,70 @@
+body{
+    text-align: center;
+    background-color:red;
+    
+
+}
+
+input{
+    padding: 6px 6px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+}
+
+select{
+    float: center;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    width: 180px;
+    height: 32px;
+}
+
+.forme{
+    float: left;
+    color: black;
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+    font-weight: lighter;
+}
+
+input::placeholder{
+    font-size: 1.2em;
+    font-weight: lighter;
+    color:#999;
+}
+
+.heure{
+    width: 170px;
+    height: 16px;
+}
+
+button{
+    background-color: #519e8a;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+}
+
+form{
+    width: 400px;
+}
+
+#gauche {
+    float: left;
+}
+
+#droite {
+    float: right;
+}
+
+#ens{
+    width: 420px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px ;
+    background-color: yellow;
+
+}
