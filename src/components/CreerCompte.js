@@ -20,7 +20,7 @@ class CreerCompte extends Component {
 
     displayScreen = (e) => {
         console.log(e.target.id)
-        e.target.id == "client"?
+        e.target.id === "client"?
         (this.setState({
             afficheQui: "client"
         }))

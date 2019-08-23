@@ -3,7 +3,7 @@ import '../css/creerCompte.css';
 import Connexion from './Connexion';
 import '../css/Connexion.css';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-dom'
+// import { tryStatement } from '@babel/types';
 
 class Affiche extends Component {
     state = {
@@ -72,12 +72,12 @@ class Affiche extends Component {
                     </form>
                     <div >
                         <button className="buttonCreer" type="Submit"> Creer </button><br/>
-                        <a id="creer" href = "/" onClick={this.handleClick}>Se connecter</a>
+                        <span id="creer" className="hyper" onClick={this.handleClick}>Se connecter</span>
                     </div>
                 </div>
             </div>
         ):(
-                ReactDOM.render(<Connexion />, document.getElementById('root'))
+            ReactDOM.render(<Connexion />, document.getElementById('root'))
         )
     }
 }

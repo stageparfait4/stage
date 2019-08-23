@@ -49,7 +49,7 @@ class Connexion extends Component{
                     <br/><br/>
                     <button id="connect" size="15">Connexion</button>
                     <br/>
-                    <a id="creer" href = "#" onClick={this.handleClick}>creer un compte</a>
+                    <button id="creer" href = "#" onClick={this.handleClick}>creer un compte</button>
                 </form>
             </div>
         )
