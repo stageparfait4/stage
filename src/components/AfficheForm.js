@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import RestoCarte from './RestoCarte';
 
 class CompteResto extends Component{
     state={
@@ -11,13 +13,22 @@ class CompteResto extends Component{
         heure_fermeture: null,
         Quartier: null,
         ville : null,
-        numero: null
+        numero: null,
+        afficheResto: false
 
     }
     submit = (e) => {
         e.preventDefault();
         console.log(this.state);
     }
+
+    handleClick = (e) =>{
+        this.setState({
+            afficheResto:true
+        })
+        // e.preventDefault();
+    }
+
     change = (e) => {
         this.setState({
             [e.target.id]: e.target.value
@@ -29,7 +40,7 @@ class CompteResto extends Component{
         this.setState({option: event.target.value});
      }   
     render(){
-        return(
+        return this.state.afficheResto===false?(
         <div className = "form-wrapper">
             <h1>Entrez vos coordonnees</h1>
             <form  onSubmit={this.submit}>
@@ -65,12 +76,13 @@ class CompteResto extends Component{
                 </div>
             </form>
             <div>
-                <button className="buttonCreer">Creer</button><br />
-                <a id="creer" href = "/" onClick={this.handleClick}>Se connecter</a>
+                <button className="buttonCreer" onClick={this.handleClick}>Creer</button><br />
+                <a id="creer" href = "/">Se connecter</a>
             </div>
         </div>
+    ):(
+        <RestoCarte />
     )}
-    
 }
 
 export default CompteResto;

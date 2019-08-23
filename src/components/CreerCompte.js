@@ -60,7 +60,7 @@ class CreerCompte extends Component {
                             <input type="radio" name='accountChoice'id="res" onClick={this.displayScreen}/>
     
                             <label htmlFor="client">client</label>
-                            <input type="radio" name='accountChoice'id="client" checked="true" onClick={this.displayScreen}/>
+                            <input type="radio" name='accountChoice'id="client" checked= {true} onClick={this.displayScreen}/>
                         </form><br/>
                         <Affiche sow={this.displayScreen}/>
                     </div>

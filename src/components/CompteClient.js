@@ -13,15 +13,15 @@ class Affiche extends Component {
         Password: null,
         Ville: null,
         Quartier: null,
-        affiche: false
+        afficheClient: false
     }
 
-    handleClick = (e) =>{
-        this.setState({
-            affiche:true
-        })
-        // e.preventDefault();
-    }
+    // handleClick = (e) =>{
+    //     this.setState({
+    //         afficheClient:true
+    //     })
+    //     // e.preventDefault();
+    // }
 
     submit = (e) => {
         e.preventDefault();
@@ -39,7 +39,7 @@ class Affiche extends Component {
     }
 
     render() {
-        return this.state.affiche===false?(
+        return(
             <div className = "initial"> 
                 <div className="form-wrapper" >
                     <h1>Entrez vos coordonnees</h1>
@@ -72,12 +72,10 @@ class Affiche extends Component {
                     </form>
                     <div >
                         <button className="buttonCreer" type="Submit"> Creer </button><br/>
-                        <span id="creer" className="hyper" onClick={this.handleClick}>Se connecter</span>
+                        <a id="creer" href = "/">Se connecter</a>
                     </div>
                 </div>
             </div>
-        ):(
-            ReactDOM.render(<Connexion />, document.getElementById('root'))
         )
     }
 }
