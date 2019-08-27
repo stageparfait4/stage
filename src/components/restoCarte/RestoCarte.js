@@ -17,12 +17,14 @@ class RestoCarte extends Component{
             {nom:'Eru', prix: '2000', photo:logo, id:1},
             {nom:'Ndole', prix: '2500', photo:ndole, id:2},
             {nom:'Koki', prix: '1000', photo:eru, id:3},
-            {nom:'Eru', prix: '2000', photo:koki, id:1},
-            {nom:'Ndole', prix: '2500', photo:banana, id:2},
-            {nom:'Koki', prix: '1000', photo:koki2, id:3},
-            {nom:'Eru', prix: '2000', photo:plantain, id:1},
-            {nom:'Ndole', prix: '2500', photo:image, id:2}
-        ]
+            {nom:'condre', prix: '2000', photo:koki, id:4},
+            {nom:'achu', prix: '2500', photo:banana, id:5},
+            {nom:'porty', prix: '1000', photo:koki2, id:6},
+            {nom:'njama njama', prix: '2000', photo:plantain, id:7},
+            {nom:'fufu', prix: '2500', photo:image, id:8}
+        ],
+        show:false,
+        data: null
     }
 
     delRepas = (id) =>{
@@ -32,7 +34,29 @@ class RestoCarte extends Component{
         
         this.setState({
             repas: newList
+        });
+    }
+
+    findMeal=(id)=>{
+        return(
+            this.state.repas.find(meal=>{
+                return meal.id === id
+            })
+        )
+    }
+
+    handleClick = (id) => {
+        const newState = this.state.repas.filter(meal=>{
+            return meal.id !== id
         })
+
+        this.setState({ 
+            repas: [...newState,this.findMeal(id)],
+            show:true,
+            data:this.findMeal(id)
+        })
+
+        // console.log(this.findMeal(id))
     }
 
     render(){
@@ -40,7 +64,7 @@ class RestoCarte extends Component{
             <div id='overallCarte'>
                 <Nav />
                 <div className="restoCarte">
-                    <DispCarte carte={this.state.repas} delt={this.delRepas} />
+                    <DispCarte carte={this.state.repas} delt={this.delRepas} data={this.state.data} click={this.handleClick} show={this.state.show} />
                     <button id='addMeal'>Ajouter un nouveau repas</button>
                 </div>
             </div>

@@ -34,7 +34,7 @@
     border-color:#519e8a;
 }
 
-.buttonCreerClient{
+.buttonCreerResto{
     border:none;
     text-align: center;
     background-color: #519e8a;
@@ -45,10 +45,12 @@
     border-radius: 7px;
 }
 
-.buttons{
-    margin-top: 8px;
-}
-
 .informations{
     text-align: center;
+}
+
+.buttonsResto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 90px;
 }

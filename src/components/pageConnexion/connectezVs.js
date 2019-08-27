@@ -26,14 +26,22 @@ class Connexion extends Component{
     }
     render(){
         if(this.state.afficheQui==="creerCompte"){
-            <div>
-                <ChoixTypeCompte />
-            </div>
+            return(
+
+                <div>
+                <   ChoixTypeCompte />
+                </div>
+            )
         }else if(this.state.afficheQui==="connexion"){
-            <div><RestoCarte /></div>
+            return(
+
+                <div><RestoCarte /></div>
+            )
         }
         else{
-            <div className="imageFont">    
+            return(
+
+                <div className="imageFont">    
                 <div className="logoConnexion"> <LogoCenter /></div>
                 <div className="titleConnexion"><p>Connectez-vous pour de meilleurs decouvertes</p></div>
                 <div className = "pageConnexion">
@@ -51,6 +59,7 @@ class Connexion extends Component{
                     </form>
                 </div>
             </div>
+            )
         }
     }
 }

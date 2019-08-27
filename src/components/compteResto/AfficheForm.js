@@ -67,8 +67,13 @@ class AfficheForm extends Component{
                     <label htmlFor="heure fermeture" className="forme">heure fermeture :  </label>
                     <input type="time" placeholder="heure fermeture" id="heure fermeture" className = "inputCreer" onChange={this.change} />
                 </div>
-                <div className="buttons">
-                    <button className="buttonCreerClient" href = "/">Creer</button>
+                <div className="buttonsResto">
+                    <div className="buttons">
+                        <button className="buttonCreerResto" href = "/">Creer</button>
+                    </div>
+                    <div>
+                        <a id="connetResto" href = "/">Se connecter</a>
+                    </div>
                 </div>
             </div>
             </form>
