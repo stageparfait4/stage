@@ -1,0 +1,20 @@
+.radioButtons{
+justify-content: center;
+display: flex;
+font-size: 1.5rem;
+grid-gap: 50px;
+}
+
+
+.accountChoice{
+    height:1rem; 
+    width:1rem;
+}
+
+.Restaurant{
+    margin-left: 1rem;
+}
+
+.Client{
+    margin-left: 1rem;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/logo.png';
-import '../css/LogoCenter.css'
+import logo from '../../assets/logo.png';
+import './LogoCenter.css'
 
 const LogoCenter =()=>{
     return(

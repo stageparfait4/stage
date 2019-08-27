@@ -1,0 +1,48 @@
+.dispRepas{
+    display: inline-flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    align-items: center;
+    align-content: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+/* img{
+    vertical-align: middle;
+} */
+
+.mealImage{
+    border-right: 20px;
+}
+
+.btn{
+    font-size: 0.75em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: rgba(137, 156, 158, 0.548);
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    width: 100px;
+}
+
+.mealData{
+    margin-left: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.foodName{
+    padding-right: 10px;
+}
+
+.meal{
+    margin-right: 7px;
+}
+
+.mealAction{
+    display: flex;
+    flex-direction: column;
+}

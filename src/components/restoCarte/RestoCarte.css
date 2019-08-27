@@ -1,8 +1,12 @@
-#right{
+#addMeal{
     float:right;
     background-color: yellow;
 }
 
-#test{
+#overallCarte{
     text-align: center;
+}
+
+.restoCarte{
+    margin-top: 10px;
 }

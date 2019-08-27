@@ -1,0 +1,54 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    margin: 10px 10px;
+    grid-gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+.firstColumn{
+    display: grid;
+    grid-template-columns: column;
+    line-height:40px;    
+}
+
+.secColumn{
+    display: grid;
+    grid-template-columns: column;
+    line-height:40px;
+}
+
+.inputCreer, .selectCreer{
+    border-bottom: 1px solid #000;
+    line-height:40px;
+}
+
+.inputCreer:focus, .selectCreer:focus{
+    outline: 0;
+    border-color:#519e8a;
+}
+
+.buttonCreerClient{
+    border:none;
+    text-align: center;
+    background-color: #519e8a;
+    color: white;
+    padding: 10px 40px;
+    font-size: 1em;
+    font-weight: lighter;
+    border-radius: 7px;
+}
+
+.buttons{
+    margin-top: 8px;
+}
+
+.informations{
+    text-align: center;
+}
