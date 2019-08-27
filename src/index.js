@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Connexion from './components/Connexion';
+import Connexion from './components/pageConnexion/connectezVs'
+import RestoCarte from './components/restoCarte/RestoCarte'
+import Affiche from './components/creationPageClient/CompteClient'
+import Modification from './components/modifierUnRepas/ModificationRepas'
+import ChoixTypeCompte from './components/typeCompte/ChoixTypeCompte'
 
 ReactDOM.render(<Connexion />, document.getElementById('root'));
 
