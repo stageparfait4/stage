@@ -5,9 +5,10 @@ import RestoCarte from './components/restoCarte/RestoCarte'
 import Affiche from './components/creationPageClient/CompteClient'
 import Modification from './components/modifierUnRepas/ModificationRepas'
 import ChoixTypeCompte from './components/typeCompte/ChoixTypeCompte'
+import ShowRestaurant from './components/showRestaurants/ShowRestaurant'
 import Header from './components/hearder/header'
 
-ReactDOM.render(<Connexion />, document.getElementById('root'));
+ReactDOM.render(<ShowRestaurant />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

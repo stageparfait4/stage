@@ -12,6 +12,7 @@ class Nav extends Component{
                     <li className="navLink"><NavLink to='https://google.com'>Ajouter Repas</NavLink></li>
                     <li className="navLink"><NavLink to='https://google.com'>Parametres</NavLink></li>
                     <li className="navLink"><NavLink to='/connexion'>Deconnexion</NavLink></li>
+                    <li className="navLink"><NavLink to='/DemoPage'>Demos</NavLink></li>
                 </ul>
             </div>
         )

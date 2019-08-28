@@ -3,7 +3,7 @@ import './connect.css';
 import LogoCenter from '../logo/LogoCenter';
 import ChoixTypeCompte from '../typeCompte/ChoixTypeCompte'
 import RestoCarte from '../restoCarte/RestoCarte'
-import Header from '../hearder/header'
+// import Header from '../hearder/header'
 import {BrowserRouter, Link} from 'react-router-dom'
 
 class Connexion extends Component{
@@ -58,9 +58,9 @@ class Connexion extends Component{
         
         if(affiche){ return(
             <div>
-                <div>
+                {/* <div>
                     <Header />
-                </div>
+                </div> */}
                 <div className="imageFont">    
                     <div className="logoConnexion"> <LogoCenter /></div>
                     <div className="titleConnexion"><p>Connectez-vous pour de meilleurs decouvertes</p></div>
