@@ -1,0 +1,71 @@
+.repa {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    width: 50vw;
+    border-bottom: 1px solid #000;
+}
+
+.imageRepas {
+    margin-top: 15px;
+}
+
+.nomRepas {
+    margin-top: 15px;
+}
+
+
+.prixRepas {
+    margin-top: 15px;
+}
+
+.nombrePlat {
+    margin-top: 15px;
+}
+
+.bouttonRetirer {
+    margin-top: 15px;
+}
+
+.nomPrixRepas {
+    margin-bottom: 15px;
+}
+
+.btnRepas {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-gap: 10px;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px 40px;
+    background-color: #519e8a;
+    color: white;    
+}
+
+.number {
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.number:focus {
+    outline: 0;
+    border-bottom: 1px solid red;
+}
+
+.btnRetirerModif {
+    border-radius: 5px;
+    color: white;
+    background-color: #519e8a;
+}
+
+.repas-list {
+    text-align: center;
+}
