@@ -5,6 +5,7 @@ import RestoCarte from './components/restoCarte/RestoCarte'
 import Affiche from './components/creationPageClient/CompteClient'
 import Modification from './components/modifierUnRepas/ModificationRepas'
 import ChoixTypeCompte from './components/typeCompte/ChoixTypeCompte'
+import Header from './components/hearder/header'
 
 ReactDOM.render(<Connexion />, document.getElementById('root'));
 

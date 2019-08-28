@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DispCarte from '../displayCarte/DisplayCarte';
-import Nav from '../navigation/Navigation';
+// import Nav from '../navigation/Navigation';
 import './RestoCarte.css';
 import logo from "../../assets/logo.png";
 import ndole from "../../assets/ndole.jpg";
@@ -38,7 +38,6 @@ class RestoCarte extends Component{
     render(){
         return(
             <div id='overallCarte'>
-                <Nav />
                 <div className="restoCarte">
                     <DispCarte carte={this.state.repas} delt={this.delRepas} />
                     <button id='addMeal'>Ajouter un nouveau repas</button>
