@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import restau from '../../assets/images.jpg'
 import Restaurant from '../restaurant/Restaurant'
-import './allRestaurants.css'
-import Carte from '../carteClient/CarteClient'
+import restau from '../../assets/koki2'
+import Carte from '../carteClient/Carte'
 
-
-class ShowRestaurants extends Component {
+class ShowRestaurant extends Component {
     state={
         restaurantList:[
             {restau:restau, name:'Alio', location:'Bangangte', id:1},
@@ -23,30 +21,34 @@ class ShowRestaurants extends Component {
             {restau:restau, name:'Mami Achu', location:'Kumba', id:13},
             {restau:restau, name:'Mami Planti', location:'Kumbo', id:14}
         ],
-        affiche:false,
-        restoId:null,
+        restauId:null,
+        affiche:false
     }
 
-    handleChange=(id)=>{
-        this.setState({
-            restoId:id,
+    handleClick= async (id)=>{
+        await this.setState({
+            restauId:id,
             affiche:true
         })
-        {console.log(this.state.restoId)}
+
+        console.log(this.state.restauId)
+        console.log(this.state.affiche)
     }
 
     render() {
-        return this.state.affiche?(
-            <div className="restauList">
-                <div><Restaurant data={this.state.restaurantList} click={this.handleChange} /></div>
-                <div><Carte restoId={this.state.restoId} /></div>
+        return !this.state.affiche?(
+            <div>
+                <Restaurant restaurants={this.state.restaurantList} handle={this.handleClick} />
             </div>
         ):(
-            <div><
-                Restaurant data={this.state.restaurantList}/>
+            <div>
+                <div>
+                    <Restaurant restaurants={this.state.restaurantList} handle={this.handleClick} />
+                </div>
+                <div><Carte restoId={this.state.restauId} /></div>
             </div>
         )
     }
 }
 
-export default ShowRestaurants
+export default ShowRestaurant
